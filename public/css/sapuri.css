@@ -13,21 +13,17 @@ em {
   color: #FF3300;
 }
 
-ul:invalid {
-  border: solid 1px red;
-}
-
 .navbar-laravel {
-  background-color: #000;
+  background-color: rgba(204, 255, 255, 0.55);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .navbar-brand {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .nav-link {
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .table-dark {
@@ -36,7 +32,7 @@ ul:invalid {
 
 .list-group-item {
   border-color: #fff;
-  background-color: #000;
+  background-color: rgba(204, 255, 255, 0.55);
 }
 
 .login-box {

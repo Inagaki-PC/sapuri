@@ -1,5 +1,4 @@
 @extends('layouts.sapuri')
-
 @section('title', 'サプリメントの編集')
 
 @section('content')
@@ -20,28 +19,28 @@
                     <div class="form-group row">
                         <label align="right" class="col-md-3" for="sapuri_name">サプリメント名<br>(sapuri_name)</label>
                         <div class="col-md-9">
-                            <input type="text" class="form-control" name="sapuri_name" placeholder="サプリメント名を入力して下さい">
+                            <input type="text" class="form-control" name="sapuri_name" placeholder="サプリメント名を入力して下さい" value="{{ $sapuri_form->sapuri_name }}">
                         </div>
                     </div>
                     <!---------------------------------------->
                     <div class="form-group row">
                         <label align="right" class="col-md-3" for="per_day">一日当たりに飲む数量<br>(per_day)</label>
                         <div class="col-md-9">
-                            <label><input type="number" name="per_day" min="1" max="10" value="1"> 粒</label>
+                            <label><input type="number" name="per_day" min="1" max="10" value="{{ $sapuri_form->per_day }}"> 粒</label>
                         </div>
                     </div>
                     <!---------------------------------------->
                     <div class="form-group row">
                         <label align="right" class="col-md-3" for="total">総数量<br>(total)</label>
                         <div class="col-md-9">
-                            <label><input type="number" name="total" min="5" max="300" value="5"> 粒入り</label>
+                            <label><input type="number" name="total" min="5" max="300" value="{{ $sapuri_form->total }}"> 粒入り</label>
                         </div>
                     </div>
                     <!---------------------------------------->
                     <div class="form-group row">
-                        <label align="right" class="col-md-3" for="sapuri_type">サプリメントの種類<br>(sapuri_type)</label>
+                        <label align="right" class="col-md-3" for="sapuri_type" value="{{ $sapuri_form->sapuri_type }}">サプリメントの種類<br>(sapuri_type)</label>
                         <div class="col-md-9">
-                            <select class="form-control" name="sapuri_type">
+                            <select class="form-control" name="sapuri_type" value="{{ $sapuri_form->sapuri_type }}">
                                 <option value=""> --- 未選択 --- </option>
                                 <option value="ダイエット">ダイエット</option>
                                 <option value="栄養補給">栄養補給</option>
@@ -58,7 +57,7 @@
                     <div class="form-group row">
                         <label align="right" class="col-md-3" for="free_comment">フリーコメント<br>(free_comment)</label>
                         <div class="col-md-9">
-                            <textarea class="form-control" name="free_comment" rows="2" placeholder="例：朝 1 粒、夕食後 1 粒等を記載！"></textarea>
+                            <textarea class="form-control" name="free_comment" rows="2" placeholder="例：朝 1 粒、夕食後 1 粒等を記載！">{{ $sapuri_form->free_comment }}</textarea>
                         </div>
                     </div>
                     <!---------------------------------------->
@@ -74,6 +73,19 @@
                         </div>
                     </div>
                 </form>
+                <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>編集・更新履歴</h2>
+                        <ul class="list-group">
+                            @if ($sapuri_form->histories != NULL)
+                                @foreach ($sapuri_form->histories as $history)
+                                    <li class="list-group-item">{{ $history->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

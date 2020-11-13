@@ -14,16 +14,16 @@ em {
 }
 
 .navbar-laravel {
-  background-color: #000;
+  background-color: rgba(204,255,255,0.55);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .navbar-brand {
-  color: #fff !important;
+  color: #000 !important; //「laravelの文字装飾」
 }
 
 .nav-link {
-  color: #fff !important;
+  color: #000 !important; //「inagaki(logoutリンク)の文字装飾」
 }
 
 .table-dark {
@@ -32,7 +32,7 @@ em {
 
 .list-group-item {
   border-color: #fff;
-  background-color: #000;
+  background-color: rgba(204,255,255,0.55);
 }
 
 .login-box {

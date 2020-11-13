@@ -4,6 +4,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 //以下を追記することでProfile Modelが扱えるようになる
 use App\Sapuri;
+// 以下を追記
+use App\History;
+// 以下を追記
+use Carbon\Carbon;
 
 class SapuriController extends Controller
 {
@@ -70,7 +74,13 @@ class SapuriController extends Controller
         // 該当するデータを上書きして保存する
         $sapuri->fill($sapuri_form)->save();
         
-        return redirect('admin/sapuri');
+        // 以下を追記
+        $history = new History;
+        $history->sapuri_id = $sapuri->id;
+        $history->edited_at = Carbon::now('Asia/Tokyo');
+        $history->save();
+        
+        return redirect('admin/sapuri'); //引数に日本時間を指定 → 編集履歴が日本時間になる
     }
 
     // 以下を追記
