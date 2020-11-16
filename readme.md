@@ -81,13 +81,14 @@ The Laravel framework is open-source software licensed under the [MIT license](h
         <style></style>
     </head>
     <body>
-<p>更新日：<?= date_default_timezone_set('Asia/Tokyo');
+    <h2>更新日：</h2>
+<p><php date_default_timezone_set('Asia/Tokyo');
 echo '<p>', date('Y年m月d日 H時i分s秒'), '</p>'; ?></p>
 
 ## ■ アプリ名
 &emsp;サプリメント管理アプリ(Supplement_document)<br>
 <br>
-## ■ 
+## ■ アプリ詳細
 &emsp;サプリメントの飲み忘れを防止・管理するアプリ<br>
 <br>
     </body>
