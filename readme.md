@@ -71,9 +71,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-## アプリ名
+<p>更新日：<?php date_default_timezone_set('Asia/Tokyo');
+echo '<p>', date('Y年m月d日 H時i分s秒'), '</p>'; ?></p>
+
+## ■ アプリ名
 &emsp;サプリメント管理アプリ(Supplement_document)<br>
 <br>
-## 
+## ■ 
 &emsp;サプリメントの飲み忘れを防止・管理するアプリ<br>
 <br>
