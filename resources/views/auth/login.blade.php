@@ -54,6 +54,10 @@
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('messages.Login') }}
                                     </button>
+                                    <br>
+                                    <p></p>
+                                    <br>
+                                       <a href="guestLogin" class="btn btn-primary guest-btn">{{ __('messages.Guest Login') }}</a>
                                 </div>
                             </div>
                         </form>

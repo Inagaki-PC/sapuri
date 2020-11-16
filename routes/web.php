@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 //PHP/Laravel 09 Routingについて理解する
 //【応用】 前章でAdmin/ProfileControllerを作成し、add Action, edit Actionを追加しました。
 //web.phpを編集して、admin/profile/create にアクセスしたら ProfileController の
@@ -28,13 +25,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('sapuri/delete', 'Admin\SapuriController@delete');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('guestLogin', 'Auth\LoginController@guestLogin');
 
 Auth::routes();
 

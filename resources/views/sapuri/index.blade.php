@@ -9,6 +9,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="caption mx-auto">
+                                <p><?php date_default_timezone_set('Asia/Tokyo');
+                                echo '<p>', date('Y年m月d日 H時i分s秒'), '</p>'; ?></p>
                                 <div class="sapuri_name p-2">
                                     <h2>サプリメント名：{{ str_limit($headline->sapuri_name, 20) }}</h2>
                                 </div>

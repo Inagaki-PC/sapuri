@@ -70,3 +70,10 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## アプリ名
+&emsp;サプリメント管理アプリ(Supplement_document)<br>
+<br>
+## 
+&emsp;サプリメントの飲み忘れを防止・管理するアプリ<br>
+<br>
