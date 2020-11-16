@@ -57,7 +57,7 @@
                                     <br>
                                     <p></p>
                                     <br>
-                                       <a href="guestLogin" class="btn btn-primary guest-btn">{{ __('messages.Guest Login') }}</a>
+                                    <a href="guestlogin" class="btn btn-primary guest-btn">{{ __('messages.Guest Login') }}</a>
                                 </div>
                             </div>
                         </form>

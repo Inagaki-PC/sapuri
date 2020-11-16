@@ -43,7 +43,7 @@ class LoginController extends Controller
     //下記のメールアドレスとパスワードの配列を引数に指定します。
     public function guestLogin()
 {
-    $email = 'XXXX@yahoo.co.jp';
+    $email = 'XXXX@guest.co.jp';
     $password = 'XXXXXXXX';
 
     if (Auth::attempt(['email' => $email, 'password' => $password])) {

@@ -24,8 +24,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::post('sapuri/edit', 'Admin\SapuriController@update');
     Route::get('sapuri/delete', 'Admin\SapuriController@delete');
 });
-
-Route::get('guestLogin', 'Auth\LoginController@guestLogin');
+//ゲストログイン機能実装
+Route::get('guestlogin', 'Auth\LoginController@guestLogin');
 
 Auth::routes();
 

@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    <br>
+                        <a href="/admin/sapuri/create" class="btn btn-primary guest-btn">サプリメントの{{ __('messages.Register') }}画面へ</a>
                 </div>
             </div>
         </div>

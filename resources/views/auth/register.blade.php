@@ -69,9 +69,7 @@
                                 <br>
                                 <p></p>
                                 <br>
-                                <button type="submit" class="btn btn-primary guest-btn">
-                                   <a href="sapuri"></a>{{ __('messages.Guest Login') }}
-                                </button>
+                                <a href="guestlogin" class="btn btn-primary guest-btn">{{ __('messages.Guest Login') }}</a>
                             </div>
                         </div>
                     </form>
