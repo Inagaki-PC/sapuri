@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>tech boost</title>
+        <!-- Bootstrap --> <!-- paiza引用 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style></style>
+    </head>
+<body>
 <div>■更新日時</div>
     <script>
         //今日の日付データを変数に格納
