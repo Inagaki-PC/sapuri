@@ -70,8 +70,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-
-<p>更新日：<?php date_default_timezone_set('Asia/Tokyo');
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>tech boost</title>
+        <!-- Bootstrap --> <!-- paiza引用 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style></style>
+    </head>
+    <body>
+<p>更新日：<?= date_default_timezone_set('Asia/Tokyo');
 echo '<p>', date('Y年m月d日 H時i分s秒'), '</p>'; ?></p>
 
 ## ■ アプリ名
@@ -80,3 +90,5 @@ echo '<p>', date('Y年m月d日 H時i分s秒'), '</p>'; ?></p>
 ## ■ 
 &emsp;サプリメントの飲み忘れを防止・管理するアプリ<br>
 <br>
+    </body>
+</html>
