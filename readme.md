@@ -1,45 +1,33 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>tech boost</title>
-        <!-- Bootstrap --> <!-- paiza引用 -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <style></style>
-    </head>
-<body>
-<div>■更新日時</div>
-    <script>
-        //今日の日付データを変数に格納
-        //変数は"today"とする
-        var today=new Date();
-        //年・月・日・曜日を取得
-        var year = today.getFullYear();
-        var month = today.getMonth()+1;
-        var week = today.getDay();
-        var day = today.getDate();
-        
-        var week_ja= new Array("日","月","火","水","木","金","土");
-        //年・月・日・曜日を書き出す
-        ocument.write(year+"年"+month+"月"+day+"日 "+week_ja[week]+"曜日");
-    </script>
-    <br>
-    <script>
-        //時刻データを取得して変数に格納する
-        //変数は"time"とする
-        var time= new Date();
-        //時・分・秒を取得
-        var hour = time.getHours();
-        var minute = time.getMinutes();
-        var second = time.getSeconds();
-        document.write(hour+"時",+minute+"分"+second+"秒");
-    </script>
 ## ■ アプリ名
 &emsp;サプリメント管理アプリ(Supplement_document)<br>
 <br>
-## ■ アプリ詳細
+## ■ アプリ概要
 &emsp;サプリメントの飲み忘れを防止・管理するアプリ<br>
-<br>
-    </body>
-</html>
+## ■ 目的
+&emsp;　私は、健康補助や筋力UPの効果のあるサプリメントを飲んでいますが、飲み忘れが多い。<br>
+&emsp;飲用しているサプリメントの配送サービスに飲み忘れの人向けの一時配送停止サービス等があり、<br>
+&emsp;サプリメント飲み忘れが一定数いると考えました。<br>
+&emsp;　サプリメントとは、基本的に毎日決められた推奨数飲み続けることで効果を実感するものと考えていますが、<br>
+&emsp;飲み忘れによって、効果を実感できない人が世の中に多数いるのではと思い、アプリ開発に着手しました。<br>
+## ■ 開発環境
+&emsp; ・ サーバーサイド言語：PHP<br>
+&emsp; ・ 　　フレームワーク：Laravel<br>
+&emsp; ・ 　　　データベース：MySQL<br>
+&emsp; ・ 　マークアップ言語：HTML<br>
+&emsp; ・ スタイルシート言語：CSS<br>
+&emsp; ・ 　　フロントエンド：Bootstrap<br>
+&emsp; ・ 　　　　　開発環境：Cloud9<br>
+&emsp; ・ 　　バージョン管理：Git hub<br>
+&emsp; ・ 　　　　　本番環境：Heroku<br>
+## ■ 機能一覧
+&emsp; ・ ユーザー新規登録
+&emsp; ・ ログイン・ログアウト
+&emsp; ・ ゲストユーザーログイン機能
+&emsp; ・ サプリメント情報新規登録
+&emsp; ・ サプリメント情報(編集、削除）
+&emsp; ・ サプリメント飲用記録
+&emsp; ・ Web push通知
+## ■ 開発期間
+&emsp;
+&emsp;&emsp;
+&emsp;&emsp;

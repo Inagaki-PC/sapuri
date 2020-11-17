@@ -49,7 +49,9 @@
                             <!-- Authentication Links -->
                             {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                             @guest
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.Login') }}</a></li>
+                                <li><a class="btn btn-primary guest-btn" href="{{ route('login') }}">{{ __('messages.Login') }}</a></li>
+                                <p>&nbsp;</p>
+                                <li><a href="guestlogin" class="btn btn-primary guest-btn">{{ __('messages.Guest Login') }}</a></li>
                             {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                             @else
                                 <li class="nav-item dropdown">
@@ -73,6 +75,8 @@
                 </div>
             </nav>
             <!-- ここまでナビゲーションバー -->
+            
+            
             
             <main class="py-4">
                 @yield('content') {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}

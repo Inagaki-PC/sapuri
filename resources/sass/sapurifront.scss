@@ -1,6 +1,23 @@
 body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background: rgba(203,255,211,0.6);
   color: #000;
 }
+
+.navbar-laravel {
+  background-color: rgba(204,255,255,0.55);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-brand {
+  color: #000 !important; //「laravelの文字装飾」
+}
+
+.nav-link {
+  color: #000 !important; //「inagaki(logoutリンク)の文字装飾」
+}
+
 
 .header {
   .logo {

@@ -7,7 +7,9 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2 align="center">サプリメントの新規登録</h2>
-                <p align="center" class="lead"><em>※必要事項を入力して下さい！</em></p>
+                <div class="line">
+                    <p align="center" class="lead"><em>※必要事項を入力して下さい！</em></p>
+                </div>
                 <form action="{{ action('Admin\SapuriController@create') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0) <!-- countメソッドは配列の個数を返すメソッドになっています。 -->
                         <ul>

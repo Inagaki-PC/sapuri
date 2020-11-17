@@ -1,5 +1,21 @@
 body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background: rgba(203, 255, 211, 0.6);
   color: #000;
+}
+
+.navbar-laravel {
+  background-color: rgba(204, 255, 255, 0.55);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-brand {
+  color: #000 !important;
+}
+
+.nav-link {
+  color: #000 !important;
 }
 
 .header .logo {

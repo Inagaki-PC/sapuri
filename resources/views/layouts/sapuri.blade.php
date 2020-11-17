@@ -20,10 +20,7 @@
         <!-- Styles -->
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet"> <!-- Laravel標準で用意されているCSSを読み込みます -->
         <link href="{{ secure_asset('css/sapuri.css') }}" rel="stylesheet"> <!-- 後で作成するCSSを読み込みます -->
-            <style>
-                body {
-                    padding: 30px;
-                }
+        	<style>
             </style>
     </head>
     <body>
