@@ -1,8 +1,15 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background: rgba(203,255,211,0.6);
+  background-image: url(image/background_image1.jpg);
   color: #000;
+  padding: 30px;
+  background-size: 100vw 100%;
+}
+
+.image {
+  width: 555px;
+  height: 400px;
 }
 
 .navbar-laravel {

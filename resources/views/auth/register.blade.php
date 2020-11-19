@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.sapuri')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('messages.Register') }}</div>
+                <h4 align="center" class="card-header">{{ __('messages.Register') }}</h4>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

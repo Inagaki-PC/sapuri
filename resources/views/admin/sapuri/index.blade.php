@@ -13,8 +13,10 @@
             <div class="col-md-8">
                 <form action="{{ action('Admin\SapuriController@index') }}" method="get">
                     <div class="form-group row">
-                        <label class="col-md-2">サプリメント検索</label>
-                        <div class="col-md-8">
+                        <label class="col-md-4">
+                            <div align="right" class="search-name">サプリメント検索</div>
+                        </label>
+                        <div class="col-md-6">
                             <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                         </div>
                         <div class="col-md-2">

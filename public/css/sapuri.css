@@ -1,21 +1,14 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background: rgba(203, 255, 211, 0.6);
+  background-color: rgba(203, 255, 211, 0.6);
   color: #000;
   padding: 30px;
-  
 }
 
-.line {
-  width: 300px;
-  text-align: center;
-  border: 2px dotted #008080;
-  margin: 0 auto;
-}
-
-.line p{
-  margin: 0;
+.image {
+  width: 555px;
+  height: 400px;
 }
 
 h2 {
@@ -24,11 +17,6 @@ h2 {
 
 em {
   color: #FF3300;
-}
-
-.image {
-  width: 500px;
-  height: 300px;
 }
 
 .navbar-laravel {

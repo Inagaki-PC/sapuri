@@ -2,6 +2,8 @@
 
 @section('content')
     <div class="container">
+        <img class="image" src="{{ asset('image/running1.jpg') }}"><img class="image" src="{{ asset('image/plant1.jpg') }}">
+        <h3 align="center" class="card-header">サプリメントを毎日飲む習慣をつけましょう！</h3>
         <hr>
         @if (!is_null($headline))
             <div class="row">
@@ -9,6 +11,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="caption mx-auto">
+                                <u><font size="6">♦これまでの編集履歴</font></u>
                                 <p><?php date_default_timezone_set('Asia/Tokyo');
                                 echo '<p>', date('Y年m月d日 H時i分s秒'), '</p>'; ?></p>
                                 <div class="sapuri_name p-2">

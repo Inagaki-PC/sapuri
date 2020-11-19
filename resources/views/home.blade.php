@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <img class="image" src="{{ asset('image/fruits1.jpg') }}"><img class="image" src="{{ asset('image/plant1.jpg') }}">
+    <img class="image" src="{{ asset('image/running1.jpg') }}"><img class="image" src="{{ asset('image/plant1.jpg') }}">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -14,10 +14,9 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <p align="center">You are logged in!</p>
-                    <br>
+                    <h5 align="center">↓ ↓サプリメント登録はこちら↓ ↓</h5>
                     <div align="center">
-                        <a href="/admin/sapuri/create" class="btn btn-primary guest-btn">サプリメントの{{ __('messages.Register') }}画面へ</a>
+                        <a href="/admin/sapuri/create" class="btn btn-primary guest-btn">サプリメント登録画面へ</a>
                     </div>
                 </div>
             </div>

@@ -21,9 +21,6 @@
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet"> <!-- Laravel標準で用意されているCSSを読み込みます -->
         <link href="{{ secure_asset('css/sapurifront.css') }}" rel="stylesheet"> <!-- 後で作成するCSSを読み込みます -->
             <style>
-                body {
-                    padding: 30px;
-                }
             </style>
     </head>
     <body>
@@ -51,18 +48,18 @@
                             @guest
                                 <li><a class="btn btn-primary guest-btn" href="{{ route('login') }}">{{ __('messages.Login') }}</a></li>
                                 <p>&nbsp;</p>
-                                <li><a href="guestlogin" class="btn btn-primary guest-btn">{{ __('messages.Guest Login') }}</a></li>
+                                <li><a  class="btn btn-primary guest-btn" href="guestlogin" >{{ __('messages.Guest Login') }}</a></li>
                             {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                             @else
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                        <u>{{ Auth::user()->name }}</u> <span class="caret"></span>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
-                                            {{ __('messages.Logout') }}
+                                            <u>{{ __('messages.Logout') }}</u>
                                         </a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
