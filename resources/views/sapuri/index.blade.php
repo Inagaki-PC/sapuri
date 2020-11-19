@@ -2,18 +2,53 @@
 
 @section('content')
     <div class="container">
-        <img class="image" src="{{ asset('image/running1.jpg') }}"><img class="image" src="{{ asset('image/plant1.jpg') }}">
-        <h3 align="center" class="card-header">サプリメントを毎日飲む習慣をつけましょう！</h3>
+        <div class="sample-box">
+            <img class="image" src="{{ asset('image/running1.jpg') }}"><img class="image" src="{{ asset('image/plant1.jpg') }}">
+            <div class="first-comment">
+                <h3>ダイエット管理に！</h3>
+            </div>
+            <div class="second-comment">
+                <h3>健康維持管理に！</h3>
+            </div>
+        </div>
+        <h2 align="center" class="card-header">よくサプリメントの飲み忘れる方へ！<br>サプリメントを毎日飲む習慣をつけましょう！</h2>
         <hr>
+        <div class="top-comment js-trigger">
+            <h3 align="center" >月々の費用を払っているのに、サプリメントを飲み忘れて効果を実感できない人へ</h3>
+            <br>
+            <h4>　　　　・サプリメント飲料を記録<br>　　　　・手持ちのサプリ残数の把握</h4>
+            <br>
+            <h3>　　　が手軽にできるツールです！</h3>
+        </div>
+        <hr size=5>
+        <p id="RealtimeClockArea">※ここに時計(2桁固定版)が表示されます。</p>
+            <script type="text/javascript">
+                function set2fig(num) {
+                // 桁数が1桁だったら先頭に0を加えて2桁に調整する
+                    var ret;
+                    if( num < 10 ) { ret = "0" + num; }
+                    else { ret = num; }
+                    return ret;
+                    }
+                    function showClock2() {
+                        var nowTime = new Date();
+                        var nowHour = set2fig( nowTime.getHours() );
+                        var nowMin = set2fig( nowTime.getMinutes() );
+                        var nowSec = set2fig( nowTime.getSeconds() );
+                        var msg = "現在時刻は、" + nowHour + ":" + nowMin + ":" + nowSec + " です。";
+                    document.getElementById("RealtimeClockArea").innerHTML = msg;
+                }
+                setInterval('showClock2()',1000);
+            </script>
         @if (!is_null($headline))
             <div class="row">
                 <div class="headline col-md-10 mx-auto">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="caption mx-auto">
-                                <u><font size="6">♦これまでの編集履歴</font></u>
-                                <p><?php date_default_timezone_set('Asia/Tokyo');
-                                echo '<p>', date('Y年m月d日 H時i分s秒'), '</p>'; ?></p>
+                                <div class="sapuri_name p-2">
+                                    <h1>♦編集履歴♦</h1>
+                                </div>
                                 <div class="sapuri_name p-2">
                                     <h2>サプリメント名：{{ str_limit($headline->sapuri_name, 20) }}</h2>
                                 </div>
@@ -66,7 +101,7 @@
                     <hr>
                 @endforeach
             </div>
-        </div>
+        </div> -->
     </div>
     </div>
 @endsection

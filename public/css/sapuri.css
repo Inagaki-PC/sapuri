@@ -4,6 +4,7 @@ body {
   background-color: rgba(203, 255, 211, 0.6);
   color: #000;
   padding: 30px;
+  font-family: sans-serif;
 }
 
 .image {
@@ -33,6 +34,7 @@ em {
 }
 
 .table-dark {
+  background-color: #fff;
   color: #000;
 }
 

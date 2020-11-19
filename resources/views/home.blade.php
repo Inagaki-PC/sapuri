@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <h3 align="center" class="card-header">サプリメント飲料を管理しましょう！</h3>
+                <h3 align="center" class="card-header">ログインしました！　サプリメント登録しましょう！</h3>
 
                 <div class="card-body">
                     @if (session('status'))
