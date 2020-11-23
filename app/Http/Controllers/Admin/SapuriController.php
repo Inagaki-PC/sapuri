@@ -33,8 +33,8 @@ class SapuriController extends Controller
         //データベースに保存する
         $sapuri->fill($form);
         $sapuri->save();
-        // admin/sapuri/createにリダイレクトする
-        return redirect('admin/sapuri/create');
+        // admin/sapuri/createにリダイレクトする→編集一覧に飛ぶように修正
+        return redirect('admin/sapuri/');
     }  
     
     // 以下を追記
@@ -43,7 +43,7 @@ class SapuriController extends Controller
         $cond_title = $request->cond_title;
         if ($cond_title != '') {
             // 検索されたら検索結果を取得する
-            $posts = Sapuri::where('title', $cond_title)->get();
+            $posts = Sapuri::where('sapuri_name', $cond_title)->get();
         } else {
             // それ以外はすべてのサプリ情報を取得する
             $posts = Sapuri::all();

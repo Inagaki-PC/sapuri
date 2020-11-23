@@ -14,11 +14,10 @@
         <h2 align="center" class="card-header">よくサプリメントの飲み忘れる方へ！<br>サプリメントを毎日飲む習慣をつけましょう！</h2>
         <hr>
         <div class="top-comment js-trigger">
-            <h3 align="center" >月々の費用を払っているのに、サプリメントを飲み忘れて効果を実感できない人へ</h3>
-            <br>
-            <h4>　　　　・サプリメント飲料を記録<br>　　　　・手持ちのサプリ残数の把握</h4>
-            <br>
-            <h3>　　　が手軽にできるツールです！</h3>
+            <h3 align="center" >「サプリメント飲料を記録」や「手持ちのサプリ残数の把握」が手軽にできるツールです！</h3>
+        </div>
+        <div align="center" class="sapuri-list">
+            <a href="/admin/sapuri/" class="btn btn-primary guest-btn">サプリメント一覧画面へ</a>
         </div>
         <hr size=5>
         <p id="RealtimeClockArea">※ここに時計(2桁固定版)が表示されます。</p>
