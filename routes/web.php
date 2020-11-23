@@ -23,6 +23,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('sapuri/edit', 'Admin\SapuriController@edit');
     Route::post('sapuri/edit', 'Admin\SapuriController@update');
     Route::get('sapuri/delete', 'Admin\SapuriController@delete');
+    Route::get('sapuri/calendar1', 'Admin\SapuriController@calendar1');
+    Route::get('sapuri/calendar2', 'Admin\SapuriController@calendar2');
 });
 //ゲストログイン機能実装
 Route::get('guestlogin', 'Auth\LoginController@guestLogin');

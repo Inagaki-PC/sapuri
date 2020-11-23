@@ -29,6 +29,12 @@ em {
   color: #000 !important;
 }
 
+.navi-register {
+  margin-top: 8;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
 .nav-link {
   color: #000 !important;
 }

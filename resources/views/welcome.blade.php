@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sapuri document
+                    LaravelSapuri document
                 </div>
 
                 <div class="links">

@@ -18,6 +18,11 @@
                     <div align="center">
                         <a href="/admin/sapuri/create" class="btn btn-primary guest-btn">サプリメント登録画面へ</a>
                     </div>
+                    <hr width="100">
+                    <h5 align="center">↓ サプリメント登録済の方はこちらへ ↓</h5>
+                    <div align="center">
+                        <a href="/admin/sapuri/" class="btn btn-primary guest-btn">サプリメント一覧画面へ</a>
+                    </div>
                 </div>
             </div>
         </div>

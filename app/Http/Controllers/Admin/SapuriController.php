@@ -92,4 +92,15 @@ class SapuriController extends Controller
         $sapuri->delete();
         return redirect('admin/sapuri/');
     }
+    
+    // カレンダーを表示する
+        public function calendar1 ()
+    {
+        return view('admin.sapuri.calendar1');
+    }
+    
+    public function calendar2 ()
+    {
+        return view('admin.sapuri.calendar2');
+    }
 }
