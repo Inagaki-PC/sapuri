@@ -26,8 +26,8 @@
 &emsp; ・ ゲストユーザーログイン機能
 &emsp; ・ サプリメント情報新規登録
 &emsp; ・ サプリメント情報(編集、削除）
-&emsp; ・ サプリメント飲用記録
-&emsp; ・ Web push通知
+&emsp; ・ 
+&emsp; ・
 ## ■ 開発期間
 &emsp;
 &emsp;&emsp;
