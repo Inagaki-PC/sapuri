@@ -68,6 +68,8 @@
                             <div class="form-group row">
                                 <div class="offset-sm-3 col-sm-9">
                                     <input type="submit" class="btn btn-primary" value="更新">
+                                    <br>&nbsp;<br>
+                                    <u><h5><a href={{ action('Admin\SapuriController@index') }}>更新せず一覧に戻る</a><h5></u5>
                                 </div>
                             </div>
                         </div>
