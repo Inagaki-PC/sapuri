@@ -16,12 +16,13 @@
                         <label class="col-md-4">
                             <div align="right" class="search-name">サプリメント名検索</div>
                         </label>
-                        <div class="col-md-6">
+                        <div class="col-md-5">
                             <input type="text" class="form-control" name="cond_title" value="{{ $cond_title }}">
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             {{ csrf_field() }}
                             <input type="submit" class="btn btn-primary" value="検索">
+                            <a href={{ action('Admin\SapuriController@index') }}>クリア</a>
                         </div>
                     </div>
                 </form>
@@ -30,14 +31,14 @@
         <div class="row">
             <div class="admin-sapuri col-md-12 mx-auto">
                 <div class="row">
-                    <table class="table table-dark">
+                    <table class="table table-striped table-hover">
                         <thead align="center">
                             <tr>
                                 <th width="15%">サプリメント名<br>(sapuri_name)</th>
                                 <th width="20%">一日当たりに飲む数量<br>(per_day)</th>
                                 <th width="10%">総数量<br>(total)</th>
                                 <th width="20%">サプリメントの種類<br>(sapuri_type)</th>
-                                <th width="30%">※フリーコメント<br>(free_comment)</th>
+                                <th width="28%">※フリーコメント<br>(free_comment)</th>
                             </tr>
                         </thead>
                         <tbody align="center">
@@ -50,10 +51,10 @@
                                     <td>{{ str_limit($sapuri->free_comment, 200) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ action('Admin\SapuriController@edit', ['id' => $sapuri->id]) }}">編集</a>
+                                            <a href="{{ action('Admin\SapuriController@edit', ['id' => $sapuri->id]) }}" class="btn btn-outline-primary">編集</a>
                                         </div>
                                         <div>
-                                            <a href="{{ action('Admin\SapuriController@delete', ['id' => $sapuri->id]) }}">削除</a>
+                                            <a href="{{ action('Admin\SapuriController@delete', ['id' => $sapuri->id]) }}" class="btn btn-outline-danger">削除</a>
                                         </div>
                                     </td>
                                 </tr>
