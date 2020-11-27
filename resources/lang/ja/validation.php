@@ -149,6 +149,8 @@ return [
         'sapuri_name' => 'サプリメント名',
         'per_day' => '一日当たりに飲む数量',
         'total' => '総数量',
+        'day' => '日付',
+        'description' => '説明',
         ],
 
 ];

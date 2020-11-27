@@ -38,7 +38,7 @@
                                 <th width="20%">一日当たりに飲む数量<br>(per_day)</th>
                                 <th width="10%">総数量<br>(total)</th>
                                 <th width="20%">サプリメントの種類<br>(sapuri_type)</th>
-                                <th width="28%">※フリーコメント<br>(free_comment)</th>
+                                <th width="25%">※フリーコメント<br>(free_comment)</th>
                             </tr>
                         </thead>
                         <tbody align="center">
@@ -51,10 +51,13 @@
                                     <td>{{ str_limit($sapuri->free_comment, 200) }}</td>
                                     <td>
                                         <div>
-                                            <a href="{{ action('Admin\SapuriController@edit', ['id' => $sapuri->id]) }}" class="btn btn-outline-primary">編集</a>
+                                            <a href="{{ action('CalendarController@index', ['id' => $sapuri->id]) }}" class="btn btn-outline-secondary">日付管理</a>
                                         </div>
                                         <div>
-                                            <a href="{{ action('Admin\SapuriController@delete', ['id' => $sapuri->id]) }}" class="btn btn-outline-danger">削除</a>
+                                            <a href="{{ action('Admin\SapuriController@edit', ['id' => $sapuri->id]) }}" class="btn btn-outline-primary">　編集　</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ action('Admin\SapuriController@delete', ['id' => $sapuri->id]) }}" class="btn btn-outline-danger">　削除　</a>
                                         </div>
                                     </td>
                                 </tr>

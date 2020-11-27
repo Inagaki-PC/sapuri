@@ -29,6 +29,14 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 //ゲストログイン機能実装
 Route::get('guestlogin', 'Auth\LoginController@guestLogin');
 
+//カレンダー機能実装
+Route::get('/holiday','CalendarController@getHoliday');
+Route::post('/holiday','CalendarController@postHoliday');
+Route::get('/holiday/{id}','CalendarController@getHolidayId');
+Route::delete('/holiday','CalendarController@deleteHoliday');
+
+Route::get('/calendar','CalendarController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
