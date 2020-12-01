@@ -4,7 +4,6 @@ body {
   background-image: url(/images/background_image1.jpg?79ee90520c1548d48e0f96ac348ffcf8);
   background-size: 100vw 100%;
   color: #000;
-  padding: 30px;
   font-family: sans-serif;
 }
 
@@ -19,6 +18,10 @@ h2 {
 
 em {
   color: #FF3300;
+}
+
+.navbar {
+  padding: 1rem 0.5rem;
 }
 
 .navbar-laravel {

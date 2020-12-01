@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 画面幅を小さくしたとき、例えばスマートフォンで見たときなどに文字や画像の大きさを調整してくれるタグです。 -->
         
         <!-- CSRF Token -->
-        <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- ※CSRF保護を受けられる(Webアプリケーション利用者自身が意図しない処理が実行されてしまう脆弱性または攻撃手法) -->
+        <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- ※CSRF保護を受けられる　※Webアプリケーション利用者自身が意図しない処理が実行されてしまう脆弱性または攻撃手法 -->
         {{-- 各ページごとにtitleタグを入れるために@yieldで空けておきます。--}}
         <title>@yield('title')</title><!-- @マーク記載の部分はメソッドを読み込んでいる -->
         

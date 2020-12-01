@@ -3,13 +3,7 @@
 @section('content')
     <div class="container">
         <div class="sample-box">
-            <img class="image" src="{{ asset('image/running1.jpg') }}"><img class="image" src="{{ asset('image/plant1.jpg') }}">
-            <div class="first-comment">
-                <h3>ダイエット管理に！</h3>
-            </div>
-            <div class="second-comment">
-                <h3>健康維持管理に！</h3>
-            </div>
+            <img class="image" src="{{ asset('image/sapuri_l.jpg') }}">
         </div>
         <h2 align="center" class="card-header">よくサプリメントの飲み忘れる方へ！<br>サプリメントを毎日飲む習慣をつけましょう！</h2>
         <hr>
