@@ -4,11 +4,11 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <h2>サプリメントの一覧</h2>
+            <h2 class="col-md-12">サプリメントの一覧</h2>
         </div>
         <div class="row">
             <div class="col-md-4">
-                <a href="{{ action('Admin\SapuriController@add') }}" role="button" class="btn btn-primary">新規登録</a>
+                <br><a href="{{ action('Admin\SapuriController@add') }}" role="button" class="btn btn-primary">新規登録</a>
             </div>
             <div class="col-md-8">
                 <form action="{{ action('Admin\SapuriController@index') }}" method="get">
@@ -34,11 +34,11 @@
                     <table class="table table-striped table-hover">
                         <thead align="center">
                             <tr>
-                                <th width="15%">サプリメント名<br>(sapuri_name)</th>
-                                <th width="20%">一日当たりに飲む数量<br>(per_day)</th>
+                                <th width="15%">サプリ名<br>(sapuri_name)</th>
+                                <th width="20%">一日に飲む数量<br>(per_day)</th>
                                 <th width="10%">総数量<br>(total)</th>
-                                <th width="20%">サプリメントの種類<br>(sapuri_type)</th>
-                                <th width="25%">※フリーコメント<br>(free_comment)</th>
+                                <th width="20%">サプリの種類<br>(sapuri_type)</th>
+                                <th width="20%">※フリーコメント<br>(free_comment)</th>
                             </tr>
                         </thead>
                         <tbody align="center">

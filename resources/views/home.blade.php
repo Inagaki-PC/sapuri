@@ -1,12 +1,14 @@
-@extends('layouts.sapuri')
+@extends('layouts.sapurifront')
 
 @section('content')
 <div class="container">
-    <img class="image" src="{{ asset('image/running1.jpg') }}"><img class="image" src="{{ asset('image/plant1.jpg') }}">
+    <div class="sample-box">
+        <img class="image" src="{{ asset('image/sapuri_l.jpg') }}">
+    </div>
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
-                <h3 align="center" class="card-header">ログインしました！　サプリメント登録しましょう！</h3>
+                <h3 align="center" class="card-header">ログインしました！<br>サプリメント登録しましょう！</h3>
 
                 <div class="card-body">
                     @if (session('status'))

@@ -11,11 +11,12 @@ body {
   background-color: #fff;
   padding-right: 0px;
   padding-left: 0px;
+  max-width: 900px;
 }
 
 .image {
-  width: 1140px;
-  height: 500px;
+  width: 900px;
+  height: 450px;
 }
 
 .sample-box {
@@ -83,13 +84,15 @@ body {
 }
 
 .navbar {
-  padding: 1.0rem 24.0rem;
-  background-image: url(image/background_image1.jpg);
-  background-size: 100vw 100%;
+  //background-image: url(image/background_image1.jpg);
+  //background-size: 100vw 100%;
+  background-color: #F0F8FF	;
+  padding: 0.5rem 12.0rem;
+  padding-top: 0px;
 }
 
 .navbar-right {
-  padding-top: 15px; //ナビバー右側の上下微調整
+  padding-top: 20px; //ナビバー右側の上下微調整
 }
 
 .navbar-right ul li {
@@ -102,10 +105,18 @@ body {
 }
 
 .navbar-brand {
-  color: #000 !important; //「Topページへ(カリキュラム時：laravel)の文字装飾」
-  font-size: 20px;
+  color: 	#C0C0C0 !important; //「Topページへ(カリキュラム時：laravel)の文字装飾」
+  font-size: 28px;
   font-weight:  bold;
-  border-bottom: solid 1.5px #000;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.navbar-brand:hover {
+  background-color: #EEFFFF; 	/*リンクにマウスが乗ったら背景色を変更する*/
+}
+
+.navbar-toggler{
+    border-color: #000000;
 }
 
 .nav-link {
@@ -114,6 +125,7 @@ body {
 
 .pt-4, .py-4 {
   padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
 }
 
 .header {
@@ -125,6 +137,32 @@ body {
 
 .hr {
   color: #c0c0c0;
+}
+
+.wrapper{
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+.col-md-4 {
+  padding-left: 30px;
+}
+
+.footer-title {
+  background-color: #F0F8FF	;
+  color: #A9A9A9;
+  font-size: 12px;
+  padding: 0.5rem 12.0rem;
+  padding-top: 28px;
+  margin-bottom: 0px;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+
 }
 
 .headline {

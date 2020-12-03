@@ -1,11 +1,11 @@
-@extends('layouts.sapuri')
+@extends('layouts.sapurifront')
 
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="login-box card">
-                    <div class="login-header card-header mx-auto"><font size="6"><strong>ログイン画面</strong></font></div>
+                    <div  align="center" class="login-header card-header"><font size="6"><strong>ログイン画面</strong></font></div>
 
                     <div class="login-body card-body">
                         <form method="POST" action="{{ route('login') }}"><!-- /loginというURLを生成している -->
@@ -55,7 +55,6 @@
                                         {{ __('messages.Login') }}
                                     </button>
                                     <br>
-                                    <p></p>
                                     <br>
                                        <a href="guestlogin" class="btn btn-primary guest-btn">{{ __('messages.Guest Login') }}</a>
                                 </div>

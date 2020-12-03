@@ -1,16 +1,28 @@
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(image/background_image1.jpg);
+  background-image: url(image/background_image2.png);
   background-size: 100vw 100%;
   color: #000;
   font-family: sans-serif;
 }
 
-.image {
-  width: 555px;
-  height: 400px;
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+  max-width: 900px;
 }
+
+.image {
+  width: 800px;
+  height: 450px;
+  text-align:center;
+}
+
+.sample-box {
+    position: relative;
+}
+
 h2 {
    font-family: serif;
 }
@@ -20,7 +32,17 @@ em {
 }
 
 .navbar {
-  padding: 1.0rem 0.5rem;
+  background-color: #F0F8FF	;
+  padding: 0.5rem 12.0rem;
+  padding-top: 0px;
+}
+
+.navbar-right {
+  padding-top: 20px; //ナビバー右側の上下微調整
+}
+
+.navbar-right ul li {
+  display: inline-block;
 }
 
 .navbar-laravel {
@@ -29,7 +51,10 @@ em {
 }
 
 .navbar-brand {
-  color: #000 !important; //「laravelの文字装飾」
+  color: 	#C0C0C0 !important; //「Topページへ(カリキュラム時：laravel)の文字装飾」
+  font-size: 28px;
+  font-weight:  bold;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
 }
 
 .navi-register {
@@ -40,6 +65,11 @@ em {
 
 .nav-link {
   color: #000 !important; //「inagaki(logoutリンク)の文字装飾」
+}
+
+.col-md-12 {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .table-dark {
@@ -70,4 +100,22 @@ em {
 
 .sapuri-list {
   font-size: 15;
+}
+
+.pt-4, .py-4 {
+  padding-top: 0rem !important;
+  padding-bottom: 20rem !important;
+}
+
+.footer-title {
+  background-color: #F0F8FF	;
+  color: #A9A9A9;
+  font-size: 12px;
+  padding: 0.5rem 12.0rem;
+  padding-top: 28px;
+  margin-bottom: 0px;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+
 }

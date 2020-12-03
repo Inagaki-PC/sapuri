@@ -24,40 +24,36 @@
             </style>
     </head>
     <body>
-        <div id="app">
+        <div class="wrapper">
             <!-- 画面上部に表示するナビゲーションバーです。 -->
-            <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
-                <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}"> <!-- url(“パス”)は、そのまんまURLを返すメソッドです。 -->
-                        {{ config('app.name', 'Laravel') }} <!-- configフォルダのapp.phpの中にあるnameにアクセスをします。 -->
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
-
-                        </ul>
-        
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="{{ url('/') }}"> <!-- url(“パス”)は、そのまんまURLを返すメソッドです。 -->
+                    Sapuri <!-- configフォルダのapp.phpの中にあるnameにアクセスをします。 -->
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="navbar-right ml-auto">
+                        <ul>
                             <!-- Authentication Links -->
                             {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                             @guest
-                                <u><li class="navi-register"><a href="{{ route('register') }}">{{ __('messages.Register') }}</a></li></u>
+                                <li><a class="btn btn-outline-primary guest-btn" href="{{ route('register') }}">{{ __('messages.Register') }}</a></li>
+                                
+                                <li><a class="btn btn-outline-primary guest-btn" href="{{ route('login') }}">{{ __('messages.Login') }}</a></li>
+                               
                             {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                             @else
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                        <u>{{ Auth::user()->name }}</u> <span class="caret"></span>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('messages.Logout') }}
+                                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                                <u>{{ __('messages.Logout') }}</u>
                                         </a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
@@ -70,10 +66,12 @@
                 </div>
             </nav>
             <!-- ここまでナビゲーションバー -->
-            
             <main class="py-4">
                 @yield('content') {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
             </main>
-        </div> 
+            <footer>
+                <p class="footer-title">サプリメント管理アプリ(Supplement_document)</p>
+            </footer>
+        </div>
     </body>
 </html>

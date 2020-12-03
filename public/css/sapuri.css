@@ -1,15 +1,28 @@
+@charset "UTF-8";
+
 body {
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(/images/background_image1.jpg?79ee90520c1548d48e0f96ac348ffcf8);
+  background-image: url(/images/background_image2.png?b2b4ce7729e0560433a8b67dc6c752e3);
   background-size: 100vw 100%;
   color: #000;
   font-family: sans-serif;
 }
 
+.container {
+  padding-right: 0px;
+  padding-left: 0px;
+  max-width: 900px;
+}
+
 .image {
-  width: 555px;
-  height: 400px;
+  width: 800px;
+  height: 450px;
+  text-align: center;
+}
+
+.sample-box {
+  position: relative;
 }
 
 h2 {
@@ -21,7 +34,17 @@ em {
 }
 
 .navbar {
-  padding: 1rem 0.5rem;
+  background-color: #F0F8FF;
+  padding: 0.5rem 12rem;
+  padding-top: 0px;
+}
+
+.navbar-right {
+  padding-top: 20px;
+}
+
+.navbar-right ul li {
+  display: inline-block;
 }
 
 .navbar-laravel {
@@ -30,7 +53,10 @@ em {
 }
 
 .navbar-brand {
-  color: #000 !important;
+  color: #C0C0C0 !important;
+  font-size: 28px;
+  font-weight: bold;
+  font-family: "Yu Gothic", "\6E38\30B4\30B7\30C3\30AF", YuGothic, "\6E38\30B4\30B7\30C3\30AF\4F53";
 }
 
 .navi-register {
@@ -41,6 +67,11 @@ em {
 
 .nav-link {
   color: #000 !important;
+}
+
+.col-md-12 {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .table-dark {
@@ -71,5 +102,23 @@ em {
 
 .sapuri-list {
   font-size: 15;
+}
+
+.pt-4,
+.py-4 {
+  padding-top: 0rem !important;
+  padding-bottom: 20rem !important;
+}
+
+.footer-title {
+  background-color: #F0F8FF;
+  color: #A9A9A9;
+  font-size: 12px;
+  padding: 0.5rem 12rem;
+  padding-top: 28px;
+  margin-bottom: 0px;
+  text-align: center;
+  height: 70px;
+  width: 100%;
 }
 

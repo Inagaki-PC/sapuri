@@ -5,10 +5,9 @@
         <div class="sample-box">
             <img class="image" src="{{ asset('image/sapuri_l.jpg') }}">
         </div>
-        <h2 align="center" class="card-header">よくサプリメントの飲み忘れる方へ！<br>サプリメントを毎日飲む習慣をつけましょう！</h2>
-        <hr>
+        <h3 align="center" class="card-header">よくサプリメントの飲み忘れる方へ！<br>サプリメントを毎日飲む習慣をつけましょう！</h3>
         <div class="top-comment js-trigger">
-            <h3 align="center" >「サプリメント飲料を記録」や「手持ちのサプリ残数の把握」が手軽にできるツールです！</h3>
+            <h4 align="center" >「サプリメント飲料記録」を始める！</h4>
         </div>
         <div align="center" class="sapuri-list">
             <a href="/admin/sapuri/" class="btn btn-primary guest-btn">サプリメント一覧画面へ</a>
@@ -94,7 +93,6 @@
                     <hr>
                 @endforeach
             </div>
-        </div> -->
-    </div>
+        </div>
     </div>
 @endsection
