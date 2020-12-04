@@ -16,6 +16,8 @@
 //web.phpを編集して、admin/profile/create にアクセスしたら ProfileController の
 //add Action に、admin/profile/edit にアクセスしたら ProfileController の 
 //edit Action に割り当てるように設定してください。
+
+//ログインしていない場合のリダイレクトの処理:Routingの設定の最後に「->middleware(‘auth’)」と入れることで、リダイレクトされるようになる。
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
     Route::get('sapuri/create', 'Admin\SapuriController@add');
     Route::post('sapuri/create', 'Admin\SapuriController@create');
@@ -30,16 +32,18 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 Route::get('guestlogin', 'Auth\LoginController@guestLogin');
 
 //カレンダー機能実装
-Route::get('/holiday','CalendarController@getHoliday');
-Route::post('/holiday','CalendarController@postHoliday');
-Route::get('/holiday/{id}','CalendarController@getHolidayId');
-Route::delete('/holiday','CalendarController@deleteHoliday');
+Route::group(['middleware' => 'auth'], function() {
+    Route::get('/holiday','CalendarController@getHoliday');
+    Route::post('/holiday','CalendarController@postHoliday');
+    Route::get('/holiday/{id}','CalendarController@getHolidayId');
+    Route::delete('/holiday','CalendarController@deleteHoliday');
+});
 
 Route::get('/calendar','CalendarController@index');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/select', 'SelectController@index')->name('select');
 
 Route::get('/', 'SapuriController@index');
 

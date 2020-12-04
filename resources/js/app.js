@@ -27,6 +27,12 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-const app = new Vue({
-    el: '#app',
+// const app = new Vue({
+//     el: '#app',
+// });
+import 'jquery-ui/ui/widgets/datepicker.js';
+console.log('import datepicker');
+
+$(".datepicker").datepicker({                                                                                                                                                                                      
+    dateFormat: 'yy-mm-dd'                                                                                                                                                                                        
 });

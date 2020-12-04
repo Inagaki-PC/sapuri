@@ -8,7 +8,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <br><a href="{{ action('Admin\SapuriController@add') }}" role="button" class="btn btn-primary">新規登録</a>
+                <br><a href="{{ action('Admin\SapuriController@add') }}" role="button" class="btn btn-outline-primary">新規登録</a>
             </div>
             <div class="col-md-8">
                 <form action="{{ action('Admin\SapuriController@index') }}" method="get">
@@ -54,7 +54,7 @@
                                             <a href="{{ action('CalendarController@index', ['id' => $sapuri->id]) }}" class="btn btn-outline-secondary">日付管理</a>
                                         </div>
                                         <div>
-                                            <a href="{{ action('Admin\SapuriController@edit', ['id' => $sapuri->id]) }}" class="btn btn-outline-primary">　編集　</a>
+                                            <a href="{{ action('Admin\SapuriController@edit', ['id' => $sapuri->id]) }}" class="btn btn-outline-info">　編集　</a>
                                         </div>
                                         <div>
                                             <a href="{{ action('Admin\SapuriController@delete', ['id' => $sapuri->id]) }}" class="btn btn-outline-danger">　削除　</a>

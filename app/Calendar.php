@@ -33,20 +33,20 @@ class Calendar
         $next_month = date("m",$next);
         
         $this->html = <<< EOS
-<h1>
-<a class="btn btn-primary" href="/calendar?year={$prev_year}&month={$prev_month}" role="button">&lt;前月</a>
+<h1 class="document-secondtitle">
+<a class="btn btn-outline-secondary" href="/calendar?year={$prev_year}&month={$prev_month}" role="button">&lt;前月</a>
 {$year}年{$month}月
-<a class="btn btn-primary" href="/calendar?year={$next_year}&month={$next_month}" role="button">翌月&gt;</a>
+<a class="btn btn-outline-secondary" href="/calendar?year={$next_year}&month={$next_month}" role="button">翌月&gt;</a>
 </h1>
 <table class="table table-bordered">
 <tr>
-  <th scope="col">日</th>
+  <th class="sunday"scope="col">日</th>
   <th scope="col">月</th>
   <th scope="col">火</th>
   <th scope="col">水</th>
   <th scope="col">木</th>
   <th scope="col">金</th>
-  <th scope="col">土</th>
+  <th class="saturday"scope="col">土</th>
 </tr>
 EOS;
         // カレンダーの日付部分を生成する
@@ -58,7 +58,7 @@ EOS;
                     // 先月・来月の日付の場合
                     $this->html .= "<td>&nbsp;</td>";
                 } else {
-                    $this->html .= "<td>" . $day ."&nbsp"; 
+                    $this->html .= "<td>&nbsp;" . $day ."&nbsp" . "<br>";
                     $target = date("Y-m-d", mktime(0, 0, 0, $month, $day, $year)); 
                     foreach($this->holidays as $val) {
                         if ($val->day == $target) {
@@ -70,10 +70,8 @@ EOS;
                 }
                $day++;
             }
-
             $this->html .= "</tr>";
         }
-
         return $this->html .= '</table>';
     }
 }

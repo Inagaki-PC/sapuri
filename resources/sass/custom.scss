@@ -3,6 +3,89 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color: #fff;
+    background: url(image/background_image2.png) center center / cover no-repeat;
+    // background-image: url(image/background_image2.png);
+    // background-repeat:　no-repeat;
+    // background-position: center center;
+    // background-size: cover;
+    weight: 100%;
     margin: 0;
+}
+
+.navbar {
+  background-color: #F0F8FF	;
+  padding: 0.5rem 12.0rem;
+  padding-top: 0px;
+}
+
+.navbar-right {
+  padding-top: 20px; //ナビバー右側の上下微調整
+}
+
+.navbar-right ul li {
+  display: inline-block; //ナビバー左の「・」を非表示にする
+}
+
+.navbar-brand {
+  color: 	#C0C0C0 !important; //「Topページへ(カリキュラム時：laravel)の文字装飾」
+  font-size: 28px;
+  font-weight:  bold;
+  font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+.navbar-brand:hover {
+  background-color: #EEFFFF; 	/*リンクにマウスが乗ったら背景色を変更する*/
+}
+
+.container {
+  width: 60%;
+}
+
+.document-title {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.document-secondtitle {
+  margin-top: 15px;
+}
+
+.table-bordered th {
+  text-align: center;
+}
+
+.table-striped {
+  text-align: center;
+} 
+
+.saturday {
+  color: blue;
+}
+
+.sunday {
+  color: red;
+}
+.wrapper{
+    min-height: 100vh;
+    position: relative;/*←相対位置*/
+    padding-bottom: 120px;/*←footerの高さ*/
+    box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+.back-title {
+  font-size: 15px;
+}
+
+.footer-title {
+  background-color: #F0F8FF	;
+  color: #A9A9A9;
+  font-size: 12px;
+  padding: 0.5rem 12.0rem;
+  padding-top: 28px;
+  margin-bottom: 0px;
+  text-align: center;
+  height: 70px;
+  width: 100%;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
 }

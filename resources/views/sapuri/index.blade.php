@@ -7,10 +7,10 @@
         </div>
         <h3 align="center" class="card-header">よくサプリメントの飲み忘れる方へ！<br>サプリメントを毎日飲む習慣をつけましょう！</h3>
         <div class="top-comment js-trigger">
-            <h4 align="center" >「サプリメント飲料記録」を始める！</h4>
+            <h4 align="center">「サプリメント飲料記録」を始める！</h4>
         </div>
         <div align="center" class="sapuri-list">
-            <a href="/admin/sapuri/" class="btn btn-primary guest-btn">サプリメント一覧画面へ</a>
+            <a href="/admin/sapuri/" class="btn btn-outline-primary">サプリメント一覧画面へ</a>
         </div>
         <hr size=5>
         <p id="RealtimeClockArea">※ここに時計(2桁固定版)が表示されます。</p>

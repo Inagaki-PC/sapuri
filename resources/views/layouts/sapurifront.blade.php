@@ -4,29 +4,26 @@
         <meta charset="utf-8"> <!-- このコードは日本語のWebサイトであるという意味合い -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- windowsの基本ブラウザであるedgeに対応するという記載。 -->
         <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 画面幅を小さくしたとき、例えばスマートフォンで見たときなどに文字や画像の大きさを調整してくれるタグです。 -->
-        
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- ※CSRF保護を受けられる ※Webアプリケーション利用者自身が意図しない処理が実行されてしまう脆弱性または攻撃手法 -->
         {{-- 各ページごとにtitleタグを入れるために@yieldで空けておきます。--}}
-        <title>@yield('title')</title><!-- @マーク記載の部分はメソッドを読み込んでいる -->
-        
+        <!-- @マーク記載の部分はメソッドを読み込んでいる -->
+        <title>@yield('title')</title>
         <!-- Scripts -->
         <script src="{{ secure_asset('js/app.js') }}" defer></script> <!-- Laravel標準で用意されているJavascriptを読み込みます --><!-- asset('ファイルパス')はpublicディレクトリのパスを返す関数。-->
-        
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
         
         <!-- Styles -->
         <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet"> <!-- Laravel標準で用意されているCSSを読み込みます -->
         <link href="{{ secure_asset('css/sapurifront.css') }}" rel="stylesheet"> <!-- 後で作成するCSSを読み込みます -->
-            <style>
-            </style>
     </head>
     <body>
         <div class="wrapper">
             <!-- 画面上部に表示するナビゲーションバーです。 -->
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="{{ url('/') }}"> <!-- url(“パス”)は、そのまんまURLを返すメソッドです。 -->
                     Sapuri <!-- configフォルダのapp.phpの中にあるnameにアクセスをします。 -->
                 </a>
