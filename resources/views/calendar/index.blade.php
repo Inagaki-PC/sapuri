@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'カレンダー')
+@section('title', '飲料記録')
 @section('content')
     <h1 class="document-title">サプリメント記録</h1>
     {!!$cal_tag!!}

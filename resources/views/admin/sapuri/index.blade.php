@@ -28,6 +28,10 @@
                 </form>
             </div>
         </div>
+        &emsp;&emsp;
+        @include('components.alertnew')
+        @include('components.alertupdate')
+        @include('components.alertdelete')
         <div class="row">
             <div class="admin-sapuri col-md-12 mx-auto">
                 <div class="row">
@@ -57,7 +61,7 @@
                                             <a href="{{ action('Admin\SapuriController@edit', ['id' => $sapuri->id]) }}" class="btn btn-outline-info">　編集　</a>
                                         </div>
                                         <div>
-                                            <a href="{{ action('Admin\SapuriController@delete', ['id' => $sapuri->id]) }}" class="btn btn-outline-danger">　削除　</a>
+                                            <a href="{{ action('Admin\SapuriController@delete', ['id' => $sapuri->id]) }}" onclick="return confirm('本当に削除しますか')" class="btn btn-outline-danger">　削除　</a>
                                         </div>
                                     </td>
                                 </tr>

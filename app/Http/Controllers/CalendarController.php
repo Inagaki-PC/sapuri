@@ -13,6 +13,7 @@ class CalendarController extends Controller
         // 休日データ取得
         $data = new Holiday();
         $list = Holiday::all();
+        
         return view('calendar.holiday', ['list' => $list,'data' => $data]);
     }
     
@@ -49,6 +50,7 @@ class CalendarController extends Controller
         // 休日データ取得
         $data = new Holiday();
         $list = Holiday::all();
+        \Session::flash('new_message', '登録・更新しました！');
         return view('calendar.holiday', ['list' => $list, 'data' => $data]);
     }
     
@@ -70,7 +72,7 @@ class CalendarController extends Controller
         // 休日データ取得
         $data = new Holiday();
         $list = Holiday::all();
+        \Session::flash('delete_message', '削除が完了しました！');
         return view('calendar.holiday', ['list' => $list, 'data' => $data]);
     }
-    
 }

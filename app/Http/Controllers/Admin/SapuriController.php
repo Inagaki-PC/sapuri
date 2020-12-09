@@ -34,7 +34,8 @@ class SapuriController extends Controller
         $sapuri->fill($form);
         $sapuri->save();
         // admin/sapuri/createにリダイレクトする→編集一覧に飛ぶように修正
-        return redirect('admin/sapuri/');
+        
+        return redirect('admin/sapuri/')->with('new_message', '新規登録しました！');
     }  
     
     // 以下を追記
@@ -82,7 +83,7 @@ class SapuriController extends Controller
         $history->edited_at = Carbon::now('Asia/Tokyo');
         $history->save();
         
-        return redirect('admin/sapuri'); //引数に日本時間を指定 → 編集履歴が日本時間になる
+        return redirect('admin/sapuri')->with('update_message', '更新しました！'); //引数に日本時間を指定 → 編集履歴が日本時間になる
     }
 
     // 以下を追記
@@ -92,7 +93,7 @@ class SapuriController extends Controller
         $sapuri = Sapuri::find($request->id);
         // 削除する
         $sapuri->delete();
-        return redirect('admin/sapuri/');
+        return redirect('admin/sapuri/')->with('delete_message', '削除しました！');
     }
     
     // カレンダーを表示する

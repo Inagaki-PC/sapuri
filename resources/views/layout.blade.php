@@ -15,6 +15,7 @@
         <script src="{{ secure_asset('js/app.js') }}" defer></script> <!-- Laravel標準で用意されているJavascriptを読み込みます --><!-- asset('ファイルパス')はpublicディレクトリのパスを返す関数。-->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
+        
     </head>
     <body>
         <div class="wrapper">

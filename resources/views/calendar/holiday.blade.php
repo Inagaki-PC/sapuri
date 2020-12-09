@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'サプリメント管理')
+@section('title', 'サプリ更新')
 @section('content')
     <h1 class="document-title">サプリメント記録の更新画面</h1><br>
     <!-- サプリメント情報入力フォーム -->
@@ -11,7 +11,7 @@
             <input type="text" name="day" class="form-control datepicker" id="day" value="{{$data->day}}">
             <br>
             <label for="description">説明</label>
-            <input type="text" name="description" class="form-control" id="description" value="{{$data->description}}"> 
+            <textarea rows=”3″ name="description" class="form-control" id="description">{{$data->description}}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">登録</button>
         <input type="hidden" name="id" value="{{$data->id}}">
@@ -29,6 +29,10 @@
             </ul>
         </div>
     @endif
+    <br>
+    @include('components.alertnew')
+    @include('components.alertupdate')
+    @include('components.alertdelete')
     <!-- サプリメントを一覧表示させます -->
     <table class="table table-striped table-hover">
         <thead>
@@ -52,8 +56,8 @@
                         <form action="/holiday" method="post">
                             <input type="hidden" name="id" value="{{$val->id}}">
                                 {{ method_field('delete') }}
-                                {{ csrf_field() }} 
-                            <button class="btn btn-outline-danger">削除</button>
+                                {{ csrf_field() }}
+                            <button onclick="return confirm('本当に削除しますか')" class="btn btn-outline-danger">削除</button>
                         </form>
                     </td>
                 </tr>
