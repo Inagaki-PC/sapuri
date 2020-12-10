@@ -40,3 +40,5 @@
 ## ■ 今後の学習について
 &emsp;&emsp; 「PHP」や「Laravel」をより深く学ぶようにする
 &emsp;&emsp; 「Javascript」の学習をし、WEBサイトをより使いやすくするできるようにする。
+■ ポートフォリオURL
+https://lit-eyrie-31188.herokuapp.com/
