@@ -47,7 +47,7 @@ class SapuriController extends Controller
         if ($cond_title != '') {
             // 検索されたら検索結果を取得する
             //[$cond_title]のみだと全文一致検索なので→[$cond_title]→['like','%'.$cond_title.'%']に変更してキーワード検索仕様になるよう実装
-            $posts = Sapuri::where('sapuri_name', 'like','%'.$cond_title.'%')->get();
+            $posts = Sapuri::where('user_id', Auth::id())->where('sapuri_name', 'like','%'.$cond_title.'%')->get();
         } else {
             // それ以外はすべてのサプリ情報を取得する
             //$posts = Sapuri::all();　→　すべてのサプリ情報を参照してしまうので、下記whereメソッドでユーザーid毎に管理するように変更

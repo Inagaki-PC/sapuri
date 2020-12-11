@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Calendar;
 use App\Holiday;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class CalendarController extends Controller
@@ -12,7 +13,8 @@ class CalendarController extends Controller
     {
         // 休日データ取得
         $data = new Holiday();
-        $list = Holiday::all();
+        $list = Holiday::where('user_id', Auth::id())->get();
+        //$list = Holiday::all();
         
         return view('calendar.holiday', ['list' => $list,'data' => $data]);
     }
@@ -37,12 +39,14 @@ class CalendarController extends Controller
         // POSTで受信した休日データの登録
         if (isset($request->id)) {
             $holiday = Holiday::where('id', '=', $request->id)->first();
+            $holiday->user_id = Auth::id();
             $holiday->day = $request->day;
             $holiday->description = $request->description;
             $holiday->save();
             \Session::flash('update_message', '更新しました！');
         } else {
             $holiday = new Holiday(); 
+            $holiday->user_id = Auth::id();
             $holiday->day = $request->day;
             $holiday->description = $request->description;
             $holiday->save();
@@ -57,7 +61,8 @@ class CalendarController extends Controller
     
     public function index(Request $request)
     {
-        $list = Holiday::all();
+        //$list = Holiday::all();
+        $list = Holiday::where('user_id', Auth::id())->get();
         $cal = new Calendar($list);
         $tag = $cal->showCalendarTag($request->month,$request->year);
         return view('calendar.index', ['cal_tag' => $tag]);

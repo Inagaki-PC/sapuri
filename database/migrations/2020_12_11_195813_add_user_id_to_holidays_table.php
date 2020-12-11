@@ -4,17 +4,16 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddUserIdToSapurisTable extends Migration
+class AddUserIdToHolidaysTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-     //※ユーザー毎に保存内容を切り分けるテーブル
     public function up()
     {
-        Schema::table('sapuris', function (Blueprint $table) {
+        Schema::table('holidays', function (Blueprint $table) {
             $table->bigInteger('user_id')->default(0);
         });
     }
@@ -26,7 +25,7 @@ class AddUserIdToSapurisTable extends Migration
      */
     public function down()
     {
-        Schema::table('sapuris', function (Blueprint $table) {
+        Schema::table('holidays', function (Blueprint $table) {
             $table->dropColumn('user_id');
         });
     }
