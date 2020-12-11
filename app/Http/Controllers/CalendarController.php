@@ -56,7 +56,7 @@ class CalendarController extends Controller
         // 休日データ取得
         $data = new Holiday();
         $list = Holiday::all();
-        return view('calendar.holiday', ['list' => $list, 'data' => $data]);
+        return redirect('/holiday');
     }
     
     public function index(Request $request)
