@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 //以下を追記することでProfile Modelが扱えるようになる
 use App\Sapuri;
@@ -31,6 +32,7 @@ class SapuriController extends Controller
         unset($form['_token']);
         
         //データベースに保存する
+        $sapuri->user_id = Auth::id();
         $sapuri->fill($form);
         $sapuri->save();
         // admin/sapuri/createにリダイレクトする→編集一覧に飛ぶように修正
@@ -48,7 +50,9 @@ class SapuriController extends Controller
             $posts = Sapuri::where('sapuri_name', 'like','%'.$cond_title.'%')->get();
         } else {
             // それ以外はすべてのサプリ情報を取得する
-            $posts = Sapuri::all();
+            //$posts = Sapuri::all();　→　すべてのサプリ情報を参照してしまうので、下記whereメソッドでユーザーid毎に管理するように変更
+            //以下はユーザーID毎に保存内容を変更するように追記
+            $posts = Sapuri::where('user_id', Auth::id())->get();
         }
         
         return view('admin.sapuri.index', ['posts' => $posts, 'cond_title' => $cond_title]);

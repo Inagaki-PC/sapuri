@@ -3,4 +3,5 @@
     <div class="alert alert-info text-center">
         {{ session('new_message') }}
     </div>
+    {{ Session::forget('new_message') }}
 @endif

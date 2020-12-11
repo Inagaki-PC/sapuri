@@ -11,7 +11,7 @@
             <input type="text" name="day" class="form-control datepicker" id="day" value="{{$data->day}}">
             <br>
             <label for="description">説明</label>
-            <textarea rows=”3″ name="description" class="form-control" id="description">{{$data->description}}</textarea>
+            <textarea rows="2" name="description" class="form-control" id="description">{{$data->description}}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">登録</button>
         <input type="hidden" name="id" value="{{$data->id}}">

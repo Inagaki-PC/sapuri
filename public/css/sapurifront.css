@@ -147,6 +147,10 @@ body {
   color: #c0c0c0;
 }
 
+.sapuri_title {
+  padding-top: 20px;
+}
+
 .wrapper {
   min-height: 100vh;
   position: relative;

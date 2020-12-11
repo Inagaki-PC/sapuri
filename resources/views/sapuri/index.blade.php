@@ -13,11 +13,11 @@
             <a href="/admin/sapuri/" class="btn btn-outline-primary">サプリメント一覧画面へ</a>
         </div>
         <hr size=5>
-        <p id="RealtimeClockArea">※ここに時計(2桁固定版)が表示されます。</p>
+<!--        <p id="RealtimeClockArea">※ここに時計(2桁固定版)が表示されます。</p>
             <script type="text/javascript">
                 function set2fig(num) {
-                // 桁数が1桁だったら先頭に0を加えて2桁に調整する
-                    var ret;
+                // 桁数が1桁だったら先頭に0を加えて2桁に調整する-->
+                <!--     var ret;
                     if( num < 10 ) { ret = "0" + num; }
                     else { ret = num; }
                     return ret;
@@ -31,8 +31,8 @@
                     document.getElementById("RealtimeClockArea").innerHTML = msg;
                 }
                 setInterval('showClock2()',1000);
-            </script>
-        @if (!is_null($headline))
+           </script> -->
+        <!-- @if (!is_null($headline))
             <div class="row">
                 <div class="headline col-md-10 mx-auto">
                     <div class="row">
@@ -93,6 +93,6 @@
                     <hr>
                 @endforeach
             </div>
-        </div>
+        </div> -->
     </div>
 @endsection

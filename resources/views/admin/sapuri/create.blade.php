@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2 align="center">サプリメントの新規登録</h2>
+                <h2 align="center" class="sapuri_title">サプリメントの新規登録</h2>
                 <div class="line">
                     <p align="center" class="lead"><em>※必要事項を入力して下さい！</em></p>
                 </div>

@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2 align="center">サプリメントの編集画面</h2>
+                <h2 align="center" class="sapuri_title">サプリメントの編集画面</h2>
                 <p align="center" class="lead"><em>※必要事項を入力して下さい！</em></p>
                 <form action="{{ action('Admin\SapuriController@update') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0) <!-- countメソッドは配列の個数を返すメソッドになっています。 -->
@@ -41,15 +41,15 @@
                         <label align="right" class="col-md-3" for="sapuri_type" value="{{ $sapuri_form->sapuri_type }}">サプリの種類<br>(sapuri_type)</label>
                         <div class="col-md-9">
                             <select class="form-control" name="sapuri_type" value="{{ $sapuri_form->sapuri_type }}">
-                                <option value=""> --- 未選択 --- </option>
-                                <option value="ダイエット">ダイエット</option>
-                                <option value="栄養補給">栄養補給</option>
-                                <option value="健康維持">健康維持</option>
-                                <option value="疲れ目対策">疲れ目対策</option>
-                                <option value="美容">美容</option>
-                                <option value="活力">活力</option>
-                                <option value="トレーニング">トレーニング</option>
-                                <option value="その他">その他</option>
+                                <option value="" {{ $sapuri_form->sapuri_type == "" ? 'selected' : ''  }}> --- 未選択 --- </option>
+                                <option value="ダイエット" {{ $sapuri_form->sapuri_type == "ダイエット" ? 'selected' : ''  }}>ダイエット</option>
+                                <option value="栄養補給" {{ $sapuri_form->sapuri_type == "栄養補給" ? 'selected' : ''  }}>栄養補給</option>
+                                <option value="健康維持" {{ $sapuri_form->sapuri_type == "健康維持" ? 'selected' : ''  }}>健康維持</option>
+                                <option value="疲れ目対策" {{ $sapuri_form->sapuri_type == "疲れ目対策" ? 'selected' : ''  }}>疲れ目対策</option>
+                                <option value="美容" {{ $sapuri_form->sapuri_type == "美容" ? 'selected' : ''  }}>美容</option>
+                                <option value="活力" {{ $sapuri_form->sapuri_type == "活力" ? 'selected' : ''  }}>活力</option>
+                                <option value="トレーニング" {{ $sapuri_form->sapuri_type == "トレーニング" ? 'selected' : ''  }}>トレーニング</option>
+                                <option value="その他" {{ $sapuri_form->sapuri_type == "その他" ? 'selected' : ''  }}>その他</option>
                             </select>
                         </div>
                     </div>
@@ -76,7 +76,7 @@
                     </div>
                 </form>
                 <div class="row mt-5">
-                    <div class="col-md-4 mx-auto">
+                    <div align="center" class="col-md-6 mx-auto">
                         <h2>編集・更新履歴</h2>
                         <ul class="list-group">
                             @if ($sapuri_form->histories != NULL)

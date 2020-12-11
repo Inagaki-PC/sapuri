@@ -40,17 +40,18 @@ class CalendarController extends Controller
             $holiday->day = $request->day;
             $holiday->description = $request->description;
             $holiday->save();
+            \Session::flash('update_message', '更新しました！');
         } else {
             $holiday = new Holiday(); 
             $holiday->day = $request->day;
             $holiday->description = $request->description;
             $holiday->save();
+            \Session::flash('new_message', '新規登録しました！');
         }
         
         // 休日データ取得
         $data = new Holiday();
         $list = Holiday::all();
-        \Session::flash('new_message', '登録・更新しました！');
         return view('calendar.holiday', ['list' => $list, 'data' => $data]);
     }
     
