@@ -79,6 +79,6 @@ class CalendarController extends Controller
         $data = new Holiday();
         $list = Holiday::all();
         \Session::flash('delete_message', '削除が完了しました！');
-        return view('calendar.holiday', ['list' => $list, 'data' => $data]);
+        return redirect('/holiday');
     }
 }
