@@ -38,21 +38,21 @@
                     <table class="table table-striped table-hover">
                         <thead align="center">
                             <tr>
-                                <th width="15%">サプリ名<br>(sapuri_name)</th>
-                                <th width="20%">一日に飲む数量<br>(per_day)</th>
-                                <th width="10%">総数量<br>(total)</th>
+                                <th width="17%">サプリ名<br>(sapuri_name)</th>
+                                <th width="19%">一日に飲む数量<br>(per_day)</th>
+                                <th width="9%">総数量<br>(total)</th>
                                 <th width="20%">サプリの種類<br>(sapuri_type)</th>
                                 <th width="20%">※フリーコメント<br>(free_comment)</th>
                             </tr>
                         </thead>
                         <tbody align="center">
                             @foreach($posts as $sapuri)
-                                <tr><!-- Str::limit()は、文字列を指定した数値で切り詰めるというメソッドになります。 -->
+                                <tr><!-- Str::limit()は、文字列を指定した数値で切り詰めるというメソッドになります。--> 
                                     <th>{{ $sapuri->sapuri_name  }}</th>
                                     <td>{{ str_limit($sapuri->per_day, 10) }}</td>
                                     <td>{{ str_limit($sapuri->total, 10) }}</td>
                                     <td>{{ str_limit($sapuri->sapuri_type, 50) }}</td>
-                                    <td>{{ str_limit($sapuri->free_comment, 200) }}</td>
+                                    <td align="left">{!! str_limit(nl2br($sapuri->free_comment), 200) !!}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('CalendarController@index', ['id' => $sapuri->id]) }}" class="btn btn-outline-secondary">日付管理</a>

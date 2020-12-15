@@ -13,7 +13,7 @@ class CalendarController extends Controller
     {
         // 飲料データ取得
         $data = new Holiday();
-        $list = Holiday::where('user_id', Auth::id())->get();
+        $list = Holiday::where('user_id', Auth::id())->get();//ユーザーID毎に保存内容を変更するよう実装
         //$list = Holiday::all();
         
         //getメソッドの時はviewメソッドを使用する！
@@ -29,7 +29,7 @@ class CalendarController extends Controller
         } 
         //getメソッドの時はviewメソッドを使用する！
         //$list = Holiday::all();
-        $list = Holiday::where('user_id', Auth::id())->get();
+        $list = Holiday::where('user_id', Auth::id())->get();//ユーザーID毎に保存内容を変更するよう実装
         return view('calendar.holiday', ['list' => $list, 'data' => $data]);
     }
     
